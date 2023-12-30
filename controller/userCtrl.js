@@ -91,7 +91,7 @@ const logout = asyncHandler(async (req, res) => {
         secure: true,
     });
     res.sendStatus(204); //forbidden
-}); //test
+}); 
 
 
 // Update a user
