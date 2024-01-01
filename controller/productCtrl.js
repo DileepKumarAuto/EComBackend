@@ -8,10 +8,8 @@ const createProduct = asyncHandler(async (req, res) => {
             req.body.slug = slugify(req.body.title);
         }
         const newProduct = await Product.create(req.body);
-        res.json(newProduct);
-        res.json({
-            message: " Hey it's product post route"
-        })
+        res.json({ newProduct });
+
     } catch (error) {
         throw new Error(error);
     }
